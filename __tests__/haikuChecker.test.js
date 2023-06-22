@@ -12,23 +12,22 @@ describe('Triangle', () => {
 
 import HaikuChecker from './../src/haikuChecker.js';
 
-
 describe('HaikuChecker', () => {
   let haiku;
+  let haikuChecker;
 
   beforeEach(() => {
     haiku = `A world of dew,
         And within every dewdrop
         A world of struggle.`;
+    haikuChecker = new HaikuChecker(haiku);
   });
 
   test('should define HaikuChecker constructor', () => {
-    let haikuChecker = new HaikuChecker(haiku);
     expect(haikuChecker.haiku).toBe(haiku);
   });
 
   test('Should return true for a poem with 3 lines', () => {
-    let haikuChecker = new HaikuChecker(haiku);
     expect(haikuChecker.isThreeLines()).toBe(true);
   });
 
@@ -40,4 +39,14 @@ describe('HaikuChecker', () => {
     let haikuChecker = new HaikuChecker(haiku);
     expect(haikuChecker.isThreeLines()).toBe(false);
   });
+
+  // test('Should return the count of syllables per input word', () => {
+  //   let word = "Epicodus";
+  //   expect(haikuChecker.countSyllables(word)).toBe(4);
+  // });
+
+  test('Should return the count of vowels per input word of haiku', () => {
+    expect(haikuChecker.vowelCount()).toEqual(16);
+  });
+
 });
