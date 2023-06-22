@@ -28,4 +28,5 @@ describe('HaikuChecker', () => {
     let haikuChecker = new HaikuChecker(haiku);
     expect(haikuChecker.haiku).toBe(haiku);
   });
+  
 });
