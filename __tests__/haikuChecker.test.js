@@ -31,5 +31,13 @@ describe('HaikuChecker', () => {
     let haikuChecker = new HaikuChecker(haiku);
     expect(haikuChecker.isThreeLines()).toBe(true);
   });
-  
+
+  test('Should return false for a poem that is not 3 lines', () => {
+    let haiku = `A world of dew,
+    And within every dewdrop
+    A world of struggle.
+    and so much more`;
+    let haikuChecker = new HaikuChecker(haiku);
+    expect(haikuChecker.isThreeLines()).toBe(false);
+  });
 });
