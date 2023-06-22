@@ -10,7 +10,7 @@ describe('Triangle', () => {
   });
 }); */
 
-let haiku; import HaikuChecker from './../src/haikuChecker.js';
+import HaikuChecker from './../src/haikuChecker.js';
 
 
 describe('HaikuChecker', () => {
@@ -18,9 +18,7 @@ describe('HaikuChecker', () => {
 
   beforeEach(() => {
     haiku = `A world of dew,
-
         And within every dewdrop
-        
         A world of struggle.`;
   });
 
@@ -33,4 +31,5 @@ describe('HaikuChecker', () => {
     let haikuChecker = new HaikuChecker(haiku);
     expect(haikuChecker.isThreeLines()).toBe(true);
   });
+  
 });
