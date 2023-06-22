@@ -28,5 +28,9 @@ describe('HaikuChecker', () => {
     let haikuChecker = new HaikuChecker(haiku);
     expect(haikuChecker.haiku).toBe(haiku);
   });
-  
+
+  test('Should return true for a poem with 3 lines', () => {
+    let haikuChecker = new HaikuChecker(haiku);
+    expect(haikuChecker.isThreeLines()).toBe(true);
+  });
 });
