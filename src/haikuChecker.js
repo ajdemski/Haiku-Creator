@@ -15,11 +15,6 @@ export default class HaikuChecker {
     return false;
   }
 
-  /*vowelCount() {
-    let vowelCount = this.haiku.includes("a", "e", "i", "o", "u").length;
-    return vowelCount;
-  }*/
-
   vowelCount() {
     const vowels = ['a', 'e', 'i', 'o', 'u'];
     let count = 0;
