@@ -26,6 +26,6 @@ describe('HaikuChecker', () => {
 
   test('should define HaikuChecker constructor', () => {
     let haikuChecker = new HaikuChecker(haiku);
-    expect(haikuChecker(haiku)).toBe(haiku);
+    expect(haikuChecker.haiku).toBe(haiku);
   });
 });
